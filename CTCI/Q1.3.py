@@ -1,7 +1,9 @@
 class Permutation: 
 	''' 
 	Permutation: Ordered combination 
-	
+
 	'''
 	def isPermutation(str):
-		bool = false 
+		bool = False 
+
+		
