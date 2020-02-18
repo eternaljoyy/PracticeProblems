@@ -1,15 +1,15 @@
 class stringCompression: 
 	
 	def compressString(n):
-		string = ''
-		arr = []
-		count = 0 
-		for item in n:
-			if(n.index(item) == 0):
-				count+=1
-				string = item + str(count)
-				arr.append(string)
-		return arr
 
+		string = ''
+		arr = sorted(n)
+		count = 0 
+
+		for i in range(0, len(n)-1):
+			for j in range(1, len(n)):
+				if(n[i] == n[j]):
+					count+=1
+		return count
 
 	print(compressString('aabcccccaaa'))
