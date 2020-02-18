@@ -1,15 +1,21 @@
-class stringCompression: 
+class strCompression: 
 	
 	def compressString(n):
+		'''
+		Try looping through the letters in n, count the number of times word 
+		occurs and place that in a dictionary (as key value pairs). 
+		'''
+		setLetters = set(n)
+		'''convert set to dictionary 
+		fromkeys() creates a new dictionary from values provided by user. 
 
-		string = ''
-		arr = sorted(n)
-		count = 0 
+		''' 
+		dictionary = dict.fromkeys(setLetters,0)
+		for item in dictionary:
+			for i in n:
+				#replace value with the count of the letter
+				dictionary[item] = n.count(i)
+		return dictionary
 
-		for i in range(0, len(n)-1):
-			for j in range(1, len(n)):
-				if(n[i] == n[j]):
-					count+=1
-		return count
 
 	print(compressString('aabcccccaaa'))
