@@ -10,11 +10,12 @@ class strCompression:
 		fromkeys() creates a new dictionary from values provided by user. 
 
 		''' 
+		print(setLetters)
 		dictionary = dict.fromkeys(setLetters,0)
 		for item in dictionary:
-			for i in n:
+			for item in n:
 				#replace value with the count of the letter
-				dictionary[item] = n.count(i)
+				dictionary[item] = n.count(item)
 		return dictionary
 
 
