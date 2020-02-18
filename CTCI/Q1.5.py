@@ -13,7 +13,6 @@ class strCompression:
 		print(setLetters)
 		dictionary = dict.fromkeys(setLetters,0)
 		for item in dictionary:
-			for item in setLetters:
 				#replace value with the count of the letter
 				dictionary[item] = n.count(item)
 		return dictionary
