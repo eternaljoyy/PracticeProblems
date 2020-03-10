@@ -8,6 +8,7 @@ class reverse:
 		newArr = [] 
 		#Loop backwards 
 		for num in reversed(nums):
-			print(num)
+			newArr.append(num)
+		return newArr
 
 	reverseList([1,2,3])
