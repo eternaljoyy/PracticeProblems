@@ -1,6 +1,6 @@
 class reverse: 
 	#Write a program which can reverse a list.. (while preserving the order) 
-
+	#todo: figure out a way to reverse the array in-place 
 	def reverseList(nums):
 		#make another list 
 		newArr = [] 
