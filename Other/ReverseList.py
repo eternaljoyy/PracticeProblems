@@ -1,8 +1,6 @@
 class reverse: 
-	#Write a program which can reverse a list..  
-	''' 
-	Assumption: contains no duplicates. 
-	'''
+	#Write a program which can reverse a list.. (while preserving the order) 
+
 	def reverseList(nums):
 		#make another list 
 		newArr = [] 
@@ -11,4 +9,4 @@ class reverse:
 			newArr.append(num)
 		return newArr
 
-	print(reverseList([1,2,3]))
+	print(reverseList([1,2,3,4,3]))
