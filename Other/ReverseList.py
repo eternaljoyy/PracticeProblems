@@ -11,4 +11,4 @@ class reverse:
 			newArr.append(num)
 		return newArr
 
-	reverseList([1,2,3])
+	print(reverseList([1,2,3]))
