@@ -1,6 +1,6 @@
 def peakIndexInMountainArray(arr): 
 	#base case A) emty array 
-	if(arr == None):
+	if(arr == None or arr == []):
 		return 
 
 	#Loop through array 
