@@ -1,10 +1,9 @@
 def isValid(s): 
-	pattern = {'(': ')', '{': '}', '[': ']'}
 	stack = []
 
 	for char in range(len(s)):
 		#check the keys of the dictionary
-		if (s[char] in pattern):
+		if (s[char] == '(' or s[char] == '{' or s[char] == '['):
 			#append opening bracket to dictionary
 			stack.append(s[char]) 
 		else:
