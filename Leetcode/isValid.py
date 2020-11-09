@@ -1,26 +1,28 @@
-def isValid(s): 
+def isValid(s):
 	stack = []
 
-	for char in range(len(s)):
-		#check the keys of the dictionary
-		if (s[char] == '(' or s[char] == '{' or s[char] == '['):
-			#append opening bracket to dictionary
-			stack.append(s[char]) 
+	for i in range(len(s)):
+		if(s[i] == ')'):
+			if(stack and stack[-1] == '('):
+				stack.pop(-1)
+			else:
+				return False 
+		elif (s[i] == '}'):
+			if(stack and stack[-1] == '{'):
+				stack.pop(-1)
+			else:
+				return False 
+		elif (s[i] == ']'):
+			if(stack and stack[-1] == '['):
+				stack.pop(-1)
+			else:
+				return False 
 		else:
-			if(len(stack) > 0):
-				if (stack[-1] == '(' and s[char] == ')'):
-					stack.pop()
-				elif(stack[-1] == '{' and s[char] == '}'):
-					stack.pop()
-				else:
-					if(stack[-1] == '[' and s[char] == ']'):
-						stack.pop()  
+			stack.append(s[i])
 	return len(stack) == 0
 
-
-
-print(isValid('()')) 
-print(isValid("([)]"))
-print(isValid('\\{[]\\}')) 
-print(isValid('()[]\\{\\}')) 
-
+print(isValid('()'))
+print(isValid('({['))
+print(isValid(')[]{}'))
+print(isValid('()[]{}'))
+print(isValid('([)]'))
