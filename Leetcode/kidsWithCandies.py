@@ -5,7 +5,6 @@ def kidsWithCandies(candies, extraCandies):
 
 	newArr = []
 	flag = False
-	# count = 0
 
 	for item in range(len(candies)):
 		if(candies[item] + extraCandies >= max(candies)):
