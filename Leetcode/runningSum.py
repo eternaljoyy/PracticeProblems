@@ -3,15 +3,11 @@ def runningSum(nums):
 	if(len(nums) == 1 or nums == []):
 		return nums 
 
-	count = 1
+	count = 0
 	for i in range(len(nums)):
-		if(i == 0):
-			count = nums[i]
-			nums[i] = count
-		else: 
-			# sum the current value of nums w/ previous value of count 
-			count = count + nums[i]
-			nums[i] = count 
+	# sum the current value of nums w/ previous value of count 
+		count = count + nums[i]
+		nums[i] = count 
 	return nums 
 
 print(runningSum([1,2,3,4]))
