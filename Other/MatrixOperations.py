@@ -15,6 +15,7 @@ class MatrixOperations:
 				break
 		return newMatrix
 
+	
 	#Calls the max_from_ops function (doing each operation one by one)
 	def operationsList(self, newMatrix, operations):
 

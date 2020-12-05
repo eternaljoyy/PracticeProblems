@@ -7,7 +7,10 @@ def reverse(x):
 
 	string = ''
 	for digit in xList: 
-		string = digit + string
+		if (digit == '-'):
+			continue
+		else: 
+			string = digit + string
 	return int(string)
 
 print(reverse(123))
