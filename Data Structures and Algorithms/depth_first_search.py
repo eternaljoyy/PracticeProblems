@@ -1,12 +1,14 @@
+from collections import defaultdict
+
 class Graph:  
 
     def __init__(self, Vertex): 
         self.Vertex = Vertex 
-        self.adjacency_list = [[] for i in range(V)]  
+        self.graph = defaultdict(list)
 
     # Create edges between 2 nodes 
     def createEdge(self, node_u, node_v): 
-        self.adjacency_list[node_u].append(node_v)
+        self.graph[node_u].append(node_v)
 
     # Runs DFS 
     def depth_first_search(self, node):  
@@ -39,4 +41,11 @@ class Graph:
                     if not visited[item]:
                         stack.append(item)
 
- 
+
+
+first_graph = Graph(0)   
+first_graph.createEdge(1, 0)
+first_graph.createEdge(0, 2)
+first_graph.createEdge(0, 4)
+first_graph.createEdge(1, 3)
+first_graph.createEdge(3, 5)
