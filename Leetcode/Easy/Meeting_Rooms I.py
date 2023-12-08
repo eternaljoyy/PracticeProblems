@@ -8,7 +8,7 @@ def can_attend_meetings(intervals):
     =========================================================================
 
     Runtime Complexity: O(NlogN) -> due to the sorting of the array 
-    Space Complexity: O(1) -> not using any extra data structure 
+    Space Complexity: O(1) -> Not using any extra data structure 
     '''  
 
     sortedIntervals = sorted(intervals)
