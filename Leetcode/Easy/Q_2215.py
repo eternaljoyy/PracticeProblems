@@ -8,8 +8,11 @@ def findDifference(nums1, nums2):
 	(and vice versa)  
 
 	==========================================================
+	Time Complexities: 
 
-	- Runtime complexity: O(N)
+    -> M = length of nums1 
+    -> N = length of nums1 
+	- Runtime complexity: O(N + M)
 	''' 
 
 	answer = [[], []]
