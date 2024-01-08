@@ -1,4 +1,24 @@
 def mergeAlternatively(word1, word2): 
+	'''  
+	Approach: 
+
+	 - add first letter from word1 into new string
+	 - go through word1 and word2 using pointers, alternating 
+	 b/w the two 
+	 - if youve reached end of word1 or word2, then
+	 slice of the other word and add it to new string 
+	- return the new string 
+
+	============================================== 
+	
+	N = length of word1
+	M = length of word2 
+
+	**TODO ~ Time Complexities: 
+      - Runtime Complexity: 
+      - Space Complexity: O(N + M)
+	'''
+
 
 	alternateStr = "" 
 
