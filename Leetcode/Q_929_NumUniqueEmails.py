@@ -21,7 +21,6 @@ class Solution:
         for word in range(len(emails)):
 
             split_email = self.splitEmail(emails[word])
-            print(split_email)
 
             if split_email not in unique_emails:
                 unique_emails.add(split_email)
@@ -37,11 +36,11 @@ class Solution:
         new_email = ''
 
         for index in range(len(split_email)):
-            if split_email[index].isalnum() or split_email[index] == '.':
+            if split_email[index].isalnum():
                 new_email += split_email[index]
-            else:
+            elif split_email[index] == '+':
                 new_email += split_email[split_email.index('@'):]
-                break
+                break 
         return new_email
 
 
@@ -52,6 +51,6 @@ class Solution:
 
 
 second_emails = Solution()
-print(second_emails.numUniqueEmails(["test.email+alex@leetcode.com"]))
+print(second_emails.numUniqueEmails(["test.email+alex@leetcode.com", 
+    "test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]))
 
-# ["test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
