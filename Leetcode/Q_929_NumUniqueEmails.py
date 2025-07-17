@@ -1,5 +1,5 @@
 class Solution:
-            """
+        """
             :type emails: List[str]
             :rtype: int 
 
@@ -21,10 +21,10 @@ class Solution:
             -> Worst case: all of the emails in the array would be 
             unique, therefore, each one would get added onto the set. 
         """   
+
     def numUniqueEmails(self, emails):
 
         unique_emails = set()
-
 
         for word in range(len(emails)):
 
@@ -39,7 +39,6 @@ class Solution:
 
     def splitEmail(self, split_email):
 
-        # split_email = ''.join(domain.split('@'))
         new_email = ''
 
         for index in range(len(split_email)):
